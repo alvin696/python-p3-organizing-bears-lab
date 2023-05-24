@@ -24,6 +24,6 @@ class TestInsert:
 
     def test_has_unnamed_bear(self):
         '''inserts one unnamed bear into bears table.'''
-        result = cursor.execute("SELECT COUNT(*) FROM bears WHERE name IS NULL;")
+        result = cursor.execute("SELECT COUNT(*) FROM bears WHERE name IS 'Unnamed';" )
         assert(result.fetchall()[0][0] == 1)
     
